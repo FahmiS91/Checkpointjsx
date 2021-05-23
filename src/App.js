@@ -1,20 +1,20 @@
-import image from './imageInSrc.jpg'
+import { Component } from 'react'
+import FullName from './Component/Profile/FullName'
+import ProfilePhoto from './Component/Profile/ProfilePhoto'
+import Address from './Component/Profile/Address'
 import './style.css'
-function App(){
+class App extends Component{
+  
+  
+  render(){
   return(
-    <div >
-     <div style={{border:"solid 1px black",maxWidth:"100vw"}}>
-     <h1 className="title red">Your name here</h1>
-      <br/>
-      <img src={image} alt=""/>
-       <br/>
-       <img src="imageInPublic.jpg" style={{maxWidth:500}} alt=""/>
-     </div>
-     <video width="320" height="240" controls>
-     <source src="myVideo.mp4" type="video/mp4"/>
-     </video>
+    <div className="container" >
+     <ProfilePhoto/>
+     <FullName/>
+     <Address/>
     </div>
 
   )
+  }
 }
 export default App
